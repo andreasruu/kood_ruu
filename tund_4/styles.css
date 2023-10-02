@@ -1,0 +1,34 @@
+/* Tausta ja konteineri stiil */
+body {
+    background-color: #808080; /* Valige soovitud taustavärv */
+    font-size: 16px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Loob 3 võrdset veergu */
+    gap: 10px; /* Vahemaa kastide vahel */
+    background-color: #ffffff; /* Konteineri taustavärv */
+    padding: 10px; /* Padding konteineri ümber */
+}
+
+/* Üldine kasti stiil */
+.box {
+    display: flex;
+    align-items: center; /* Vertikaalne joondus */
+    justify-content: center; /* Horisontaalne joondus */
+    padding: 20px;
+    font-size: 1.5rem; /* Fonti suurus */
+}
+
+/* Punaste kastide stiil */
+.box:nth-child(odd) {
+    background-color: #e74c3c; /* Punane värv */
+    font-family: 'Monotype Corsiva', cursive; /* Kirjatüüp */
+}
+
+/* Siniste kastide stiil */
+.box:nth-child(even) {
+    background-color: #3498db; /* Sinine värv */
+    font-family: 'Roboto', sans-serif; /* Kirjatüüp */
+}
