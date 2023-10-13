@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arvamismäng</title>
+</head>
+<body>
+    <h1>Arva ära arv vahemikus 1-100</h1>
+    <button onclick="startGame()">Alusta</button>
+
+    <script>
+        function startGame() {
+            let juhuslikNumber = Math.floor(Math.random() * 100) + 1;
+            let katseteArv = 0;
+
+            while (true) {
+                let kasutajaArv = parseInt(prompt("Sisesta arv vahemikus 1-100:"));
+
+                if (isNaN(kasutajaArv)) {
+                    alert("Vigane arv.");
+                    continue;
+                }
+
+                katseid++;
+
+                if (kasutajaArv === juhuslikNumber) {
+                    alert("Palju õnne! Arvasid õige arvu " + katseteArv + " katsega!");
+                    break;
+                } else if (kasutajaArv < juhuslikNumber) {
+                    alert("Sinu pakutud arv on liiga väike!");
+                } else {
+                    alert("Sinu pakutud arv on liiga suur!");
+                }
+            }
+        }
+    </script>
+</body>
+</html>
