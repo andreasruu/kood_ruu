@@ -79,4 +79,37 @@ function harjutus14(massiiv){
         email: 'marek@example.com'
     }
 ];
+function leiaAndmed(massiiv) {
+    let vanimInimene = massiiv[0];
+    let pikimaAadressigaInimene = massiiv[0];
+    let luhimaTelefonigaInimene = massiiv[0];
+    let eestiEmailigaInimene = null;
+
+    for (let inimene of massiiv) {
+        if (inimene.vanus > vanimInimene.vanus) {
+            vanimInimene = inimene;
+        }
+
+        if (inimene.aadress.length > pikimaAadressigaInimene.aadress.length) {
+            pikimaAadressigaInimene = inimene;
+        }
+
+        if (inimene.telefon.length < luhimaTelefonigaInimene.telefon.length) {
+            luhimaTelefonigaInimene = inimene;
+        }
+
+        if (inimene.email.includes("eesti")) {
+            eestiEmailigaInimene = inimene;
+        }
+    }
+
+    console.log(`Kõige vanem inimene: ${vanimInimene.nimi}`);
+    console.log(`Inimene kellel on kõige pikem aadress: ${pikimaAadressigaInimene.nimi}`);
+    console.log(`Inimene kellel on kõige lühem telefoninumber: ${luhimaTelefonigaInimene.nimi}`);
+    if (eestiEmailigaInimene) {
+        console.log(`Inimene kelle e-posti aadressis sisaldub sõna "eesti": ${eestiEmailigaInimene.nimi}`);
+    } else {
+        console.log(`Ei leidnud kedagi kelle e-posti aadressis sisaldub sõna "eesti".`);
+    }
 }
+}g
