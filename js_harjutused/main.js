@@ -48,11 +48,11 @@ function harjutus12(){
         if (i % 3 === 0 && i % 5 === 0) {console.log('Lütseum');}
         else if (i % 3 === 0) {console.log('Tallinna');}
         else if (i % 5 === 0) {console.log('Prantsuse');}
-        if i === 50 {console.log('Tallinna Prantsuse Lütseum');}
+        if (i === 50) {console.log('Tallinna Prantsuse Lütseum');}
         else {console.log(i);}}}
 
 function harjutus13(massiiv){
-    if massiiv.includes("Marek") {console.log("Marek on massiivis")}
+    if (massiiv.includes("Marek")) {console.log("Marek on massiivis")}
     else {console.log("Marek pole massiivis");}}
 
 function harjutus14(massiiv){
