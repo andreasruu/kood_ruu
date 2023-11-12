@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopping List</title>
+</head>
+<body>
+    <h1>Shopping List</h1>
+
+    <input type="text" id="item" placeholder="Add food item" required>
+    <button id="addItem">Add</button>
+
+    <ul id="shopping-list">
+        <!-- Shopping list items will be added here -->
+    </ul>
+
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    var addButton = document.getElementById('addItem');
+    var itemInput = document.getElementById('item');
+    var shoppingList = document.getElementById('shopping-list');
+    function addNewItem() {
+        var itemValue = itemInput.value.trim();
+        if (itemValue !== '') {
+            var newItem = document.createElement('li');
+            newItem.textContent = itemValue;
+            shoppingList.appendChild(newItem);
+            itemInput.value = '';
+        } else {
+            alert('Please enter a food item.');
+        }
+        itemInput.focus();
+    }
+    addButton.addEventListener('click', addNewItem);
+    itemInput.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            addNewItem();
+        }
+    });
+});
+
+    </script>
+</body>
+</html>
