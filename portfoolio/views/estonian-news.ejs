@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Eesti uudised</title>
+    <link href="https://fonts.googleapis.com/css?family=Lilita+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>  Uudised </h1>
+            <nav>
+                <ul>
+                    <li><a href="/">Avaleht</a></li>
+                    <li><a href="/about">Info</a></li>
+                    <li><a href="/contact">Kontakt</a></li>
+                </ul>
+            </nav>
+            <a href="/profile" class="profile-link"> <%= user.username %></a>
+        </div>
+    </header>
+
+    <div class="content-container">
+        <div class="news-container">
+            <% if (news) { %>
+                <% news.forEach(article => { %>
+                    <div class="news-article">
+                        <h2><%= article.title %></h2>
+                        <p><%= article.description %></p>
+                        <a href="<%= article.link %>" target="_blank">Loe edasi</a>
+                    </div>
+                <% }) %>
+            <% } else { %>
+                <p>Uudised puuduvad</p>
+            <% } %>
+        </div>
+    </div>
+</body>
+</html>

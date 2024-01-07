@@ -21,13 +21,13 @@ body {
     align-items: start;
     gap: 16px;
     flex-grow: 1;
-    padding: 20px; /* Padding for container */
+    padding: 20px; 
 }
 
 .media-container, .text-content {
     margin-bottom: 20px;
-    padding: 15px; /* Padding for media and text content */
-    border-radius: 5px; /* Optional: for a rounded corner effect */
+    padding: 15px;
+    border-radius: 5px; 
 }
 
 .footer {
@@ -51,7 +51,7 @@ footer a:hover {
     display: flex;
     justify-content: center;
     gap: 20px;
-    margin-bottom: 20px;
+    margin: 70px auto
 }
 
 .image-item {
@@ -59,12 +59,60 @@ footer a:hover {
 }
 
 .image-item img {
-    width: 100%; /* Adjust width as needed */
-    height: 400px; /* Maintain aspect ratio */
-    max-width: auto; /* Adjust maximum width as needed */
+    width: 100%; 
+    height: 400px;
+    max-width: auto; 
 }
 
 .image-item p {
     margin-top: 8px;
     font-size: 0.9em;
+}
+header {
+    background-color: #282c34;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+.profile-link {
+    color: white;
+    text-decoration: none;
+}
+
+.profile-link:hover {
+    text-decoration: underline;
+    color: white;
+}
+.content-container {
+    max-height: 100vh; /* Viewport height */
+    overflow-y: auto; /* Enable vertical scrolling inside the container */
+    padding: 20px;
 }

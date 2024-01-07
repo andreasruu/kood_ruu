@@ -2,38 +2,39 @@
 <html lang="et">
 <head>
     <meta charset="UTF-8">
-    <title>About - Paul Keres</title>
+    <title>Info - Paul Keres</title>
     <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
+    <header>
+        <div class="header-container">
+            <h1>   Info   </h1>
+            <nav>
+                <ul>
+                    <li><a href="/">Avaleht</a></li>
+                    <li><a href="/contact">Kontakt</a></li>
+                    <li><a href="/estonian-news">Eesti Uudised</a></li>
+
+                </ul>
+            </nav>
+            <a href="/profile"class="profile-link"> <%= user.username %></a>
+        </div>
+    </header>
+    
     <div class="container">
-        <h1>Paul Kerese kohta</h1>
         <div class="image-gallery">
-            <!-- Image 1 -->
             <div class="image-item">
-                <img src="https://www.raamatukoi.ee/media/catalog/product/cache/27c51e7d28fb2b62c676142f6dde4bfd/m/a/malekool_1939-549_2_3.webp" alt="Image 1 Description">
+                <img src="https://www.raamatukoi.ee/media/catalog/product/cache/27c51e7d28fb2b62c676142f6dde4bfd/m/a/malekool_1939-549_2_3.webp" alt="Pilt 1 kirjeldus">
                 <p>Paul Kerese koostatud õpik "Malekool"</p>
             </div>
-            <!-- Image 2 -->
             <div class="image-item">
-                <img src="https://cdn.chess24.com/wEXJviceRYiacmo2I19f0g/original/keres-tal.jpg" alt="Image 2 Description">
+                <img src="https://cdn.chess24.com/wEXJviceRYiacmo2I19f0g/original/keres-tal.jpg" alt="Pilt 2 kirjeldus">
                 <p>Paul Keres ja Mikhail Tal, 1959</p>
             </div>
-            <!-- Image 3 -->
             <div class="image-item">
-                <img src="https://media-cdn.tripadvisor.com/media/photo-s/10/b2/05/a1/caption.jpg" alt="Image 3 Description">
+                <img src="https://media-cdn.tripadvisor.com/media/photo-s/10/b2/05/a1/caption.jpg" alt="Pilt 3 kirjeldus">
                 <p>Paul Kerese tänavamonument Narvas</p>
             </div>
         </div>
-    </div>
-    <div class="footer">
-        <footer>
-            <p>
-                <a href="/">Avaleht</a> | 
-                <a href="/contact">Kontakt</a>
-            </p>
-        </footer>
-    </div> 
-</body>
-</html>
+   

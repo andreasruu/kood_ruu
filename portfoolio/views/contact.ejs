@@ -5,26 +5,45 @@
     <title>Kontakt - Paul Keres</title>
     <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css">
-</head>
+    </head>
 <body>
+    <header>
+        <div class="header-container">
+            <h1>  Kontakt </h1>
+            <nav>
+                <ul>
+                    <li><a href="/">Avaleht</a></li>
+                    <li><a href="/about">Info</a></li>
+                    <li><a href="/estonian-news">Eesti Uudised</a></li>
+
+                </ul>
+            </nav>
+            <a href="/profile"class="profile-link"> <%= user.username %></a>
+        </div>
+    </header>
+    
     <div class="container">
         <h1>Kontakt</h1>
         <div class="text-content">
-            <p>Kui soovite rohkem teavet või tahate meiega ühendust võtta, palun kasutage allolevaid andmeid:</p>
+            <p>Kui soovite rohkem teavet või soovite meiega ühendust võtta, siis palun kasutage allpool olevaid kontakte:</p>
             <ul>
                 <li>E-post: paul.keres@mail.ee</li>
                 <li>Telefon: +372 5686 2001</li>
                 <li>Aadress: Maleva 5, 10117 Tallinn, Eesti</li>
             </ul>
         </div>
+        
+        <h1>Tagasiside</h1>
+        <ul>
+            <% feedback.forEach((fb) => { %>
+                <li> <%= fb.message %></li>
+            <% }); %>
+        </ul>        
+        
+        <form action="/submit-feedback" method="post">
+            <textarea name="message" placeholder="Teie tagasiside" required></textarea>
+            <button type="submit">Saada tagasiside</button>
+        </form>
     </div>
-    <div class="footer">
-        <footer>
-            <p>
-                <a href="/">Avaleht</a> | 
-                <a href="/about">Paul Kerese kohta</a>
-            </p>
-        </footer>
-    </div> 
 </body> 
 </html>
